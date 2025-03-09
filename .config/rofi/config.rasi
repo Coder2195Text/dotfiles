@@ -1,5 +1,10 @@
 @import "catppuccin-mocha"
 
+configuration {
+  sidebar-mode: true;
+icon-theme: "Papirus";
+}
+
 * {
   selected-active-foreground:  @background;
   lightfg:                     @text;
