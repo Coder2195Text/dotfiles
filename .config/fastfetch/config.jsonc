@@ -4,12 +4,7 @@
     "source": "/home/coder2195/pictures/arch.png",
     "type": "chafa",
     "height": 18,
-    "width": 36,
-    "padding": {
-      "top": 1,
-      "right": 2,
-      "left": 2
-    }
+    "width": 38,
   },
   "display": {
     "color": {
@@ -77,11 +72,6 @@
       "keyColor": "green",
     },
     {
-      "type": "de",
-      "key": "  Desktop  ",
-      "keyColor": "green",
-    },
-    {
       "type": "packages",
       "key": "󰏖  Packages ",
       "keyColor": "green",
@@ -90,12 +80,6 @@
       "type": "custom",
       "format": ">───────────<┼>───────────────────────────────────────────────────────<",
       "outputColor": "separator",
-    },
-    {
-      "type": "command",
-      "key": "󰅐  OS Age   ",
-      "keyColor": "blue",
-      "text": "birth_install=$(stat ─c %W /); current=$(date ┼%s); time_progression=$((current ─ birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
     },
     {
       "type": "uptime",

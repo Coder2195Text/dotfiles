@@ -1,3 +1,3 @@
 export QT_QPA_PLATFORM=xcb 
 export QT_QPA_PLATFORMTHEME=qt6ct
-export XDG_CONFIG_HOME="$HOME/.config"
+source /home/coder2195/.zshrc
