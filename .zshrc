@@ -120,5 +120,10 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 eval "$(fnm env --use-on-cd --shell zsh)"
+. "$HOME/.cargo/env"
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export QT_QPA_PLATFORM=xcb 
+export QT_QPA_PLATFORMTHEME=qt6ct
+export XDG_CONFIG_HOME="/home/coder2195/.config"
