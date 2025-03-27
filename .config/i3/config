@@ -36,15 +36,16 @@ set $mantle #181825
 set $crust #11111b
 
 set $mod Mod4
+workspace_layout tabbed
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:SpaceMono Nerd Font Propo 10
+font pango:Iosevka Nerd Font Propo 13
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 10
-font pango:Noto Color Emoji 10
+font pango:DejaVu Sans Mono 13
+# font pango:Noto Color Emoji 30
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -66,7 +67,7 @@ exec --no-startup-id flameshot
 exec --no-startup-id polybar
 exec --no-startup-id dunst
 exec --no-startup-id copyq --start-server
-exec --no-startup-id vesktop
+exec --no-startup-id discord
 exec --no-startup-id gnome-keyring-daemon
 # exec --no-startup-id redshift -l 40.678177:-73.944160 -m randr -P -t 6500:2800 -v -g 0.8
 
@@ -250,9 +251,13 @@ gaps inner 20px
 gaps outer -10px
 gaps top 20px
 
+title_align center
+for_window[all] title_window_icon padding 10px
 
 # i3 msg target
 for_window [class="i3-nagbar"] sticky enable
 
-for_window [class="^.*"] border pixel 4;
+for_window [all] border pixel 4;
 for_window [class="copyq"] floating enable
+
+for_window [all] title_format "<span font='Iosevka Nerd Font Propo 10' line_height='100'>%title</span>"
