@@ -24,8 +24,8 @@ config.window_padding = {
 
 config.background = {
 	{
-		source = { Color = "#1e1e2e" },
-		opacity = 0.9,
+		source = { Color = "#000000" },
+		opacity = 0.2,
 		width = "100%",
 		height = "100%",
 	},

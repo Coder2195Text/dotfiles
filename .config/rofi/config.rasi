@@ -2,18 +2,18 @@
 
 configuration {
   sidebar-mode: true;
-icon-theme: "Papirus";
+  icon-theme: "Papirus";
 }
 
 * {
   selected-active-foreground:  @background;
   lightfg:                     @text;
-  separatorcolor:              @foreground;
+  separatorcolor:              @mauve;
   urgent-foreground:           @red;
   alternate-urgent-background: @lightbg;
   lightbg:                     @mantle;
   background-color:            transparent;
-  border-color:                @foreground;
+  border-color:                @mauve;
   normal-background:           @background;
   selected-urgent-background:  @red;
   alternate-active-background: @lightbg;
@@ -23,9 +23,9 @@ icon-theme: "Papirus";
   selected-normal-foreground:  @lightbg;
   active-foreground:           @blue;
   background:                  @base;
-  selected-active-background:  @blue;
+  selected-active-background:  @mauve;
   active-background:           @background;
-  selected-normal-background:  @lightfg;
+  selected-normal-background:  @mauve;
   alternate-normal-background: @lightbg;
   foreground:                  @text;
   selected-urgent-foreground:  @background;
@@ -92,6 +92,7 @@ window {
     padding:          5;
     background-color: @background;
     border:           5;
+    border-radius: 12;
 }
 mainbox {
     padding: 0;
@@ -120,7 +121,7 @@ scrollbar {
     padding:      0;
     handle-width: 8px ;
     border:       0;
-    handle-color: @normal-foreground;
+    handle-color: @mauve;
 }
 sidebar {
     border-color: @separatorcolor;
