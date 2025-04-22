@@ -4,10 +4,7 @@ pcall(require, "luarocks.loader")
 
 
 -- Standard awesome library
-local gears = require("gears")
 local awful = require("awful")
--- Widget and layout library
-local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -16,8 +13,6 @@ local naughty = require("naughty")
 
 require("awful.autofocus");
 
-local constants = require("constants");
-local modkey = constants.modkey;
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -64,8 +59,8 @@ require("config.screens")
 
 
 require("config.rules")
-require("config.signals")
-
+require("config.client")
+require("config.notifications")
 
 --notification.connect_signal("mouse::click")
 

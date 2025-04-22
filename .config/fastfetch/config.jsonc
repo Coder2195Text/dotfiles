@@ -4,96 +4,105 @@
     "source": "~/.config/fastfetch/logo.sixel",
     "type": "raw",
     "height": 20,
-    "width": 32,
+    "width": 30,
     "padding": {
-      "top": 0,
+      "top": 0
     }
   },
   "display": {
-    "color": {
-      "separator": "blue",
-    },
-    "separator": " │ ",
+    "separator": " "
   },
   "modules": [
-    "break",
-    {
-      "type": "kernel",
-      "key": " Arch Linux ",
-      "keyColor": "magenta",
-    },
     {
       "type": "custom",
-      "format": ">───────────<┼>───────────────────────────────────────────────────────<",
-      "outputColor": "separator",
+      // rgb(242, 205, 205)
+      "format": "{#1;38;2;242;205;205}╭────────────────────────────────────────────────╮"
     },
     {
       "type": "host",
-      "key": "  MRB      ",
-      "keyColor": "cyan"
-    },
-    {
-      "type": "memory",
-      "key": "  RAM      ",
-      "keyColor": "cyan",
+      // with computer icon
+      "key": "  󰌢  Host",
+      "keyColor": "red"
     },
     {
       "type": "cpu",
-      "key": "󰍛  CPU      ",
-      "showPeCoreCount": true,
-      "keyColor": "cyan",
+      "format": "{1}",
+      // terminal escape sequence
+      "key": "{#1;38;2;235;160;172}    CPU"
     },
     {
       "type": "gpu",
-      "key": "󰍛  GPU      ",
-      "keyColor": "cyan",
-      //      "text": "lspci │ grep ─i vga │ awk ─F': │ \\\\[│\\\\]' '{print $2 \" [\" $3 \"]\"}'"
+      "format": "{1} {2}",
+      "key": "{#1;38;2;250;170;135}  󰊴  GPU"
     },
-    //    {
-    //      "type": "disk",
-    //      "key": "󰉉  Disk     ",
-    //      "keyColor": "cyan",
-    //    },
+    {
+      "type": "memory",
+      "key": "    Memory ",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "display",
+      "key": "  󰍹  Display",
+      "format": "{1}x{2} @ {3}Hz",
+      "keyColor": "green"
+    },
     {
       "type": "custom",
-      "format": ">───────────<┼>───────────────────────────────────────────────────────<",
-      "outputColor": "separator",
+      "format": "{#1;38;2;242;205;205}╰────────────────────────────────────────────────╯"
     },
     {
-      "type": "shell",
-      "key": "  Shell    ",
-      "keyColor": "green",
+      "type": "title",
+      "key": "{#1;38;2;148;226;213}   ",
+      "format": "{#1;38;2;148;226;213}{6}{7}{8}",
     },
     {
-      "type": "wm",
-      "key": "  Session  ",
-      "keyColor": "green",
+      "type": "custom",
+      "format": "{#1;38;2;242;205;205}╭────────────────────────────────────────────────╮"
+    },
+    {
+      "type": "os",
+      "key": "{#1;38;2;137;220;235}  󰣇  OS",
+      "format": "{2}"
+    },
+    {
+      "type": "kernel",
+      "key": "{#1;38;2;116;199;236}    Kernel",
+      "format": "{2}"
     },
     {
       "type": "terminal",
-      "key": "  Terminal ",
-      "keyColor": "green",
+      "format": "{5}",
+      "key": "    Terminal",
+      "keyColor": "blue"
+    },
+    {
+      "type": "wm",
+      "key": "{#1;38;2;203;166;247}    WM",
+      "format": "{2}"
     },
     {
       "type": "packages",
-      "key": "󰏖  Packages ",
-      "keyColor": "green",
+      "key": "{#1;38;2;180;190;254}  󰏗  Packages"
+    },
+    {
+      "type": "shell",
+      "key": "{#1;38;2;245;194;231}    Shell",
     },
     {
       "type": "custom",
-      "format": ">───────────<┼>───────────────────────────────────────────────────────<",
-      "outputColor": "separator",
+      "format": "{#1;38;2;242;205;205}╰────────────────────────────────────────────────╯"
     },
     {
-      "type": "uptime",
-      "key": "󰅐  Uptime   ",
-      "keyColor": "blue",
+      "type": "colors",
+      "paddingLeft": 2,
+      "block": {
+        "range": [
+          0,
+          7
+        ]
+      },
+      "symbol": "circle"
     },
-    {
-      "type": "custom",
-      "format": ">───────────<┼>───────────────────────────────────────────────────────<",
-      "outputColor": "separator",
-    },
-    "colors"
-  ],
+    "break"
+  ]
 }

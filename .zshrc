@@ -126,4 +126,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export QT_QPA_PLATFORM=xcb 
 export QT_QPA_PLATFORMTHEME=qt6ct
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 export XDG_CONFIG_HOME="/home/coder2195/.config"

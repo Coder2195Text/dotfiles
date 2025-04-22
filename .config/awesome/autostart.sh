@@ -11,3 +11,4 @@ run flameshot
 run copyq --start-server
 run discord
 run gnome-keyring-daemon
+run fcitx5
