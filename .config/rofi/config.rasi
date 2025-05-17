@@ -3,6 +3,15 @@
 configuration {
   sidebar-mode: true;
   icon-theme: "Papirus";
+  scroll-method: 1;
+  show-icons: true;
+  font: "SF Pro Display Light 12";
+  display-run: "Run";
+  display-drun: "Applications";
+  display-window: "Windows";
+  display-ssh: "";
+  modes: "drun,window,run";
+
 }
 
 * {
@@ -22,11 +31,11 @@ configuration {
   urgent-background:           @background;
   selected-normal-foreground:  @lightbg;
   active-foreground:           @blue;
-  background:                  @base;
+  background:                  inherit;
   selected-active-background:  @mauve;
   active-background:           @background;
   selected-normal-background:  @mauve;
-  alternate-normal-background: @lightbg;
+  alternate-normal-background: @background;
   foreground:                  @text;
   selected-urgent-foreground:  @background;
   normal-foreground:           @foreground;
@@ -35,10 +44,11 @@ configuration {
 
 }
 element {
-    padding: 1px ;
+    padding: 5px ;
     cursor:  pointer;
     spacing: 5px ;
     border:  0;
+    border-radius: 7px;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -58,7 +68,7 @@ element selected.normal {
 }
 element selected.urgent {
     background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
+    text-color:      @selected-urgent-foreground;
 }
 element selected.active {
     background-color: @selected-active-background;
@@ -84,13 +94,13 @@ element-text {
 }
 element-icon {
     background-color: transparent;
-    size:             1.0000em ;
+    size:             1em ;
     cursor:           inherit;
     text-color:       inherit;
 }
 window {
-    padding:          5;
-    background-color: @background;
+    padding:          5px;
+    background-color: #1e1e2e88;
     border:           5;
     border-radius: 12;
 }
@@ -108,29 +118,34 @@ textbox {
 }
 listview {
     padding:      4px 0px 0px ;
-    scrollbar:    true;
+    scrollbar:    false;
     border-color: @separatorcolor;
     spacing:      4px ;
     fixed-width:  0;
-    border:       2px dash 0px 0px ;
+    border:       2px solid 0px 0px ;
     lines:        10;
-    columns:      3;
+    columns:      1;
 }
 scrollbar {
     width:        4px ;
     padding:      0;
     handle-width: 8px ;
+    border-radius: 4px;
     border:       0;
     handle-color: @mauve;
+    handle-rounded-corners: true;
 }
 sidebar {
     border-color: @separatorcolor;
-    border:       2px dash 0px 0px ;
+    border:       0px 0px 2px 0px;
 }
 button {
     cursor:     pointer;
     spacing:    0;
     text-color: @normal-foreground;
+     border:  0;
+    border-radius: 7px;
+    padding: 5px;
 }
 button selected {
     background-color: @selected-normal-background;
@@ -138,22 +153,22 @@ button selected {
 }
 num-filtered-rows {
     expand:     false;
-    text-color: Gray;
+    text-color: @text;
 }
 num-rows {
     expand:     false;
-    text-color: Gray;
+    text-color: @text;
 }
 textbox-num-sep {
     expand:     false;
     str:        "/";
-    text-color: Gray;
+    text-color: @text;
 }
 inputbar {
-    padding:    1px ;
+    margin:    1px ;
     spacing:    0px ;
-    text-color: @normal-foreground;
-    children:   [ "prompt","textbox-prompt-colon","entry","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
+   text-color: @normal-foreground;
+    children:   ["textbox-prompt-colon","entry" ];
 }
 case-indicator {
     spacing:    0;
@@ -163,21 +178,25 @@ entry {
     text-color:        @normal-foreground;
     cursor:            text;
     spacing:           0;
-    placeholder-color: Gray;
-    placeholder:       "Type to filter";
+    placeholder-color: @text;
+    placeholder:       "Type here to search";
+    padding: 2px;
+    font-size: 20px;
+     font: "SF Pro Display Light 18";
 }
 prompt {
     spacing:    0;
     text-color: @normal-foreground;
 }
+
 textbox-prompt-colon {
     margin:     0px 0.3000em 0.0000em 0.0000em ;
     expand:     false;
-    str:        ":";
+     font: "Iosevka Nerd Font Propo 20";
+    str:        "󰍉";
+   
     text-color: inherit;
 }
 
-configuration {
-  show-icons: true;
-}
+
 
